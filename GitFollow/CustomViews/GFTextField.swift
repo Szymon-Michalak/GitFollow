@@ -5,7 +5,7 @@
 //  Created by Szymon Michalak on 04/10/2024.
 //
 //  Description:
-//  This file is part of the GitFollow project. It is designed to 
+//  This file is part of the GitFollow project. It is designed to
 //  [briefly describe what this file/class/module does].
 //
 //  Personal Notes:
@@ -38,7 +38,7 @@ class GFTextField: UITextField {
         configure()
     }
 
-    
+
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
 

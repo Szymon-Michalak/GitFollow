@@ -42,6 +42,7 @@ class SearchVC: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
+
     @objc func pushFollowerListVC() {
 
         guard isUsernameEmpty else {
@@ -53,6 +54,7 @@ class SearchVC: UIViewController {
         followerListVC.title = usernameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
     }
+
 
     func configureLogoImageView() {
         view.addSubview(logoImageView)
@@ -67,10 +69,12 @@ class SearchVC: UIViewController {
         ])
     }
 
+
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
+
 
     func configureTextField() {
         view.addSubview(usernameTextField)
@@ -84,6 +88,7 @@ class SearchVC: UIViewController {
         ])
     }
 
+
     func configureCallToActionButton() {
         view.addSubview(callToActionButton)
         callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
@@ -95,18 +100,8 @@ class SearchVC: UIViewController {
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
